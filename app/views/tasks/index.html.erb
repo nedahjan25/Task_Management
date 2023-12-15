@@ -1,0 +1,53 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Manage Tasks</h1> 
+
+<div class="text-center mt-4">
+<%= link_to 'New task', new_task_path, class: 'btn btn-primary btn-lg' %>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>My Tasks</h2>
+    <% @tasks.each do |task| %>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title"><%= task.title %></h5>
+          <p class="card-text"><strong>Status:</strong> <%= task.completed %></p>
+          <%= link_to 'Show', task, class: 'btn btn-primary btn-sm' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col-md-4">
+    <h2>In Progress</h2>
+    <% @tasks.each do |task| %>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title"><%= task.title %></h5>
+          <p class="card-text"><strong>Status:</strong> <%= task.completed %></p>
+          <%= link_to 'Show', task, class: 'btn btn-primary btn-sm' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col-md-4">
+    <h2>Completed</h2>
+    <% @tasks.each do |task| %>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title"><%= task.title %></h5>
+          <p class="card-text"><strong>Status:</strong> <%= task.completed %></p>
+          <%= link_to 'Show', task, class: 'btn btn-primary btn-sm' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
