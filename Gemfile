@@ -79,6 +79,9 @@ end
 # for TDD testing
 group :development, :test do
   gem 'rspec-rails', '~> 5.0'
+end
+
+group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'brakeman'
   gem 'bundler_audit'
