@@ -51,7 +51,6 @@ gem "bootsnap", require: false
 gem "rack-cors"
 
 
-gem 'bundler-audit'
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
@@ -85,6 +84,7 @@ group :development, :test do
 end
 
 group :development, :test do
+  gem 'bundler-audit'
   gem 'brakeman'
   gem 'ruby_audit'
   gem 'pg'
